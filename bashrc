@@ -1,20 +1,9 @@
 # .bashrc
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+export LANG="en_US.UTF-8"
+export EDITOR="/usr/bin/vim"
+export PAGER="/usr/bin/less"
 
-# User specific aliases and functions
-source ~/.git-completion.sh
-[[ $- == *i* ]]   &&   . ~/.git-prompt.sh
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-alias cal='cal -3'
-alias df='df -h'
-alias du='du -sh'
-alias grep='GREP_COLOR="1;33;40" LANG=C grep --color=auto'
-alias l.='ls -dF .* --color=auto'
-alias ll='ls -lFh --color=auto'
-alias lld='ls -ldFh --color=auto'
-alias ls='ls -F --color=auto'
-alias less='less -R'
